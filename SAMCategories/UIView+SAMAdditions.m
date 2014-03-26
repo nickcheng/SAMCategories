@@ -8,12 +8,16 @@
 
 #import "UIView+SAMAdditions.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UIDevice+SAMAdditions.h"
 
 @implementation UIView (SAMAdditions)
 
 - (UIImage *)sam_imageRepresentation {
 	UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0);
-	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
+  if ([[UIDevice currentDevice] sam_isInnsbruck])
+    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+  else
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	return image;
