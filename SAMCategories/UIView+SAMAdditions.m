@@ -14,10 +14,7 @@
 
 - (UIImage *)sam_imageRepresentation {
 	UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0);
-  if ([[UIDevice currentDevice] sam_isInnsbruck])
-    [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
-  else
-    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	return image;
