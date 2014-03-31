@@ -13,7 +13,7 @@
 @implementation UIView (SAMAdditions)
 
 - (UIImage *)sam_imageRepresentation {
-	UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0);
+	UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0f);
 	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();

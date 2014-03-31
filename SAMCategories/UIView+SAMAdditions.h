@@ -20,7 +20,7 @@
 
 /**
  Takes a screenshot of the underlying `CALayer` of the receiver and returns a `UIImage` object representation.
- 
+
  @return An image representing the receiver
  */
 - (UIImage *)sam_imageRepresentation;
