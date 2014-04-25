@@ -35,4 +35,6 @@ Check if the receiver is running iOS 7.
 */
 - (BOOL)sam_isInnsbruck;
 
+- (BOOL)abc;
+
 @end
