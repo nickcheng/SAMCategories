@@ -35,4 +35,11 @@ Check if the receiver is running iOS 7.
 */
 - (BOOL)sam_isInnsbruck;
 
+/**
+ Returns `YES` if the device is jailbroken.
+ 
+ @return `YES` if the device is jailbroken and `NO` if it is not.
+ */
+- (BOOL)isJailbroken;
+
 @end
