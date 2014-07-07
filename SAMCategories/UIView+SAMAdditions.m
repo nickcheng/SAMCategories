@@ -14,7 +14,7 @@
 
 - (UIImage *)sam_imageRepresentation {
 	UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0f);
-	[self.layer renderInContext:UIGraphicsGetCurrentContext()];
+	[self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	return image;
