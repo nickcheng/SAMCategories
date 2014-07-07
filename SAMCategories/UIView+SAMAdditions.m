@@ -89,4 +89,10 @@
     return UIInterfaceOrientationIsLandscape(orientation) ? CGPointMake(self.center.y, self.center.x) : self.center;
 }
 
+
+- (void)sam_resetConstraints {
+	[self removeConstraints:[self constraints]];
+	[self setNeedsUpdateConstraints];
+}
+
 @end
