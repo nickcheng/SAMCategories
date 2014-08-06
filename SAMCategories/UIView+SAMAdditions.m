@@ -49,6 +49,16 @@
 }
 
 
+- (void)sam_fadeOutAndSetHidden {
+	UIView *view = self;
+	[UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+		view.alpha = 0.0f;
+	} completion:^(BOOL finished) {
+    view.hidden = YES;
+	}];
+}
+
+
 - (void)sam_fadeIn {
 	UIView *view = self;
 	[UIView animateWithDuration:0.2 delay:0.0 options:UIViewAnimationOptionAllowUserInteraction animations:^{

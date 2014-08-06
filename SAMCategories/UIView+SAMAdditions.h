@@ -60,6 +60,13 @@
 - (void)sam_fadeOutAndRemoveFromSuperview;
 
 /**
+ Fade out the receiver and set the receiver hidden
+ 
+ The receiver will fade out in `0.2` seconds and be set hidden when the animation completes.
+ */
+- (void)sam_fadeOutAndSetHidden;
+
+/**
  Fade in the receiver.
  
  The receiver will fade in in `0.2` seconds.
