@@ -79,6 +79,13 @@
  */
 + (instancetype)sam_colorWithHex:(NSString *)hex;
 
+/*
+ * Returns a totally random color.
+ *
+ * @returns A random color.
+ */
++ (UIColor *)sam_randomColor;
+
 /**
  Returns the receiver's value as a hex string.
  
@@ -134,5 +141,19 @@
 - (CGFloat)sam_alpha;
 
 - (instancetype)sam_colorByInterpolatingToColor:(UIColor *)nextColor progress:(CGFloat)progress;
+
+/*
+ * Returns a darker color version of current color.
+ *
+ * @returns A darker color.
+ */
+- (UIColor *)sam_darkerColor;
+
+/*
+ * Returns a lighter color version of current color.
+ *
+ * @returns A light color.
+ */
+- (UIColor *)sam_lighterColor;
 
 @end

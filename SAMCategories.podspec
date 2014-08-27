@@ -8,6 +8,7 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'MIT', :file => 'LICENSE' }
 
   spec.requires_arc = true
+  spec.compiler_flags = '-Wno-gnu'
   spec.resources = 'SAMCategories/SAMCategories.bundle'
 
   spec.ios.frameworks = 'UIKit', 'CoreGraphics', 'QuartzCore'
